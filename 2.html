@@ -3,23 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <body onload="checkCookies()">
+    <title>Cookie Check</title>
+</head>
 
-        <p id="demo"></p>
-        
-        <script>
+<body onload="checkCookies()">
+
+    <p id="demo"></p>
+
+    <script>
         function checkCookies() {
-            var text = "";
-            if (navigator.cookieEnabled == true) {
+            let text = "";
+
+            if (navigator.cookieEnabled) {
                 text = "Cookies are enabled.";
             } else {
                 text = "Cookies are not enabled.";
             }
+
             document.getElementById("demo").innerHTML = text;
         }
-        </script>
-        
+    </script>
+
 </body>
 </html>
